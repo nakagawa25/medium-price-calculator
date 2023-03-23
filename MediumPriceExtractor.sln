@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PriceExtractor", "PriceExtractor\PriceExtractor.csproj", "{A1A6133F-AED1-4594-9D29-99EC975D634D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PriceExtractor.Interface", "PriceExtractor.Interface\PriceExtractor.Interface.csproj", "{925B2B7A-736F-4515-B1AE-17EE4004FA4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1A6133F-AED1-4594-9D29-99EC975D634D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1A6133F-AED1-4594-9D29-99EC975D634D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1A6133F-AED1-4594-9D29-99EC975D634D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1A6133F-AED1-4594-9D29-99EC975D634D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{925B2B7A-736F-4515-B1AE-17EE4004FA4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{925B2B7A-736F-4515-B1AE-17EE4004FA4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{925B2B7A-736F-4515-B1AE-17EE4004FA4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{925B2B7A-736F-4515-B1AE-17EE4004FA4A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD4353BD-5832-422A-B7DB-F2F0F08D311C}
+	EndGlobalSection
+EndGlobal

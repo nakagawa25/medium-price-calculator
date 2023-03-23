@@ -1,0 +1,21 @@
+﻿<Window x:Class="PriceExtractor.Interface.InsertManyScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PriceExtractor.Interface"
+        mc:Ignorable="d"
+        Title="InsertManyScreen" Height="351" Width="342">
+    <Grid>
+        <ComboBox Name="cbAsset" HorizontalAlignment="Left" Margin="50,90,0,0" VerticalAlignment="Top" Width="250"/>
+        <TextBox Name="txtAmount" HorizontalAlignment="Left" Margin="50,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtTotalValue" HorizontalAlignment="Left" Margin="50,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <DatePicker Name="dpDate" HorizontalAlignment="Left" Margin="50,32,0,0" VerticalAlignment="Top"/>
+        <Button Name="btnInsert" Content="Inserir" HorizontalAlignment="Left" Margin="50,242,0,0" VerticalAlignment="Top" Width="84" Height="37" Click="btnInsert_Click"/>
+        <Label Content="Quantidade" HorizontalAlignment="Left" Margin="50,117,0,0" VerticalAlignment="Top"/>
+        <Label Content="Valor Total" HorizontalAlignment="Left" Margin="50,169,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ativo" HorizontalAlignment="Left" Margin="50,59,0,0" VerticalAlignment="Top"/>
+        <Label Content="Data da Negociação" HorizontalAlignment="Left" Margin="50,1,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
