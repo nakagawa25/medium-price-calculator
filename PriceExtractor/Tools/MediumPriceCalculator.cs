@@ -41,7 +41,7 @@ namespace PriceExtractor.Tools
                 asset.TotalValue = Math.Round(asset.TotalValue, 2);
             }
 
-            return assets.ToList();
+            return assets.Where(a => a.Amount > 0).ToList();
         }
     }
 }
