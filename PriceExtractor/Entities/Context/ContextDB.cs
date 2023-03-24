@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace PriceExtractor.Entities.Context
 {
@@ -13,8 +14,14 @@ namespace PriceExtractor.Entities.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var path = string.Concat("Data Source=",Directory.GetCurrentDirectory(), "\\DataBase.db");
-            optionsBuilder.UseSqlite(path);    
+            string path = string.Empty;
+#if DEBUG
+            var databasePath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName;
+            path = string.Concat("Data Source=", databasePath, "\\PriceExtractor\\DataBase\\DataBase.db");
+#else
+            path = string.Concat("Data Source=",Directory.GetCurrentDirectory(), "\\DataBase.db");  
+#endif
+            optionsBuilder.UseSqlite(path);
         }
     }
 }
