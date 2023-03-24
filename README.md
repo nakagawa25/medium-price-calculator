@@ -26,7 +26,7 @@ Com as negociações salvas no banco de dados do sistema, é possível utilizar 
 3. Clique no botão "Calcular"
 4. Verifique se as informações estão corretas no datagrid abaixo, é possível realizar alterações no mesmo.
 5. Clique no botão "Inserir".
-### Inserção Opicional dos Dados
+### Inserção Opcional dos Dados
 Caso seja necessário inserir negociações de compra, manualmente.
 1. Clique no botão "Inserir em Lote"
 2. Preencha os campos corretamente.
