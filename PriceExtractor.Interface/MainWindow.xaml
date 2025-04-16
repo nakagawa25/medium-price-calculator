@@ -11,13 +11,14 @@
         <TextBox Name="txtInputText" HorizontalAlignment="Left" Margin="17,18,0,0" TextWrapping="Wrap"  AcceptsReturn="True" VerticalScrollBarVisibility="Visible" VerticalAlignment="Top" Width="636" Height="67"/>
         <DataGrid Name="dgNegotiation" Margin="17,106,147,10"/>
         <DatePicker Name="dpNegotiation" HorizontalAlignment="Left" Margin="668,18,0,0" VerticalAlignment="Top" Width="112"/>
-        <Button x:Name="btnInsert" Content="Inserir" HorizontalAlignment="Left" Margin="669,239,0,0" VerticalAlignment="Top" Height="33" Width="111" Click="btnInsert_Click"/>
-        <Button x:Name="btnGetMediumPrice" Content="Obter Preços" HorizontalAlignment="Left" Margin="669,335,0,0" VerticalAlignment="Top" Height="33" Width="111" Click="btnGetMediumPrice_Click"/>
-        <Button x:Name="btnCalculateAll" Content="Calcular TUDO" HorizontalAlignment="Left" Margin="669,287,0,0" VerticalAlignment="Top" Height="33" Width="111" Click="btnCalculateAll_Click"/>
-        <Button x:Name="btnInsertMany" Content="Inserir em Lote" HorizontalAlignment="Left" Margin="669,427,0,0" VerticalAlignment="Top" Height="33" Width="111" Click="btnInsertMany_Click"/>
-        <Button x:Name="btnDeleteAll" Content="Apagar Tudo" HorizontalAlignment="Left" Margin="669,381,0,0" VerticalAlignment="Top" Height="33" Width="111" Click="btnDeleteAll_Click"/>
+        <Button x:Name="btnInsert" Content="Inserir" HorizontalAlignment="Left" Margin="669,275,0,0" VerticalAlignment="Top" Height="33" Width="111" Click="btnInsert_Click"/>
+        <Button x:Name="btnGetMediumPrice" Content="Obter Preços" HorizontalAlignment="Left" Margin="669,371,0,0" VerticalAlignment="Top" Height="33" Width="111" Click="btnGetMediumPrice_Click"/>
+        <Button x:Name="btnCalculateAll" Content="Calcular TUDO" HorizontalAlignment="Left" Margin="669,323,0,0" VerticalAlignment="Top" Height="33" Width="111" Click="btnCalculateAll_Click"/>
+        <Button x:Name="btnInsertMany" Content="Inserir em Lote" HorizontalAlignment="Left" Margin="669,463,0,0" VerticalAlignment="Top" Height="33" Width="111" Click="btnInsertMany_Click"/>
+        <Button x:Name="btnDeleteAll" Content="Apagar Tudo" HorizontalAlignment="Left" Margin="669,417,0,0" VerticalAlignment="Top" Height="33" Width="111" Click="btnDeleteAll_Click"/>
         <Button x:Name="btnCalculatePersonal" Content="Calcular Excel" HorizontalAlignment="Left" Margin="668,106,0,0" VerticalAlignment="Top" Height="33" Width="111" Click="btnCalculatePersonal_Click"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="674,163,0,0" VerticalAlignment="Top" Height="53" Width="102" Click="Button_Click"/>
+        <Button x:Name="btnCalculateDividends" Content="Tela de Dividendos" HorizontalAlignment="Left" Margin="668,229,0,0" VerticalAlignment="Top" Height="33" Width="111" Click="btnCalculateDividends_Click"/>
+        <Button x:Name="btnCalculateUSA" Content="Calcular USA" HorizontalAlignment="Left" Margin="668,158,0,0" VerticalAlignment="Top" Height="33" Width="111" Click="btnCalculateUSA_Click"/>
 
     </Grid>
 </Window>

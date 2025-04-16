@@ -1,0 +1,16 @@
+﻿<Window x:Class="PriceExtractor.Interface.DividendScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PriceExtractor.Interface"
+        mc:Ignorable="d"
+        Title="DividendScreen" Height="450" Width="800">
+    <Grid>
+        <TextBox Name="txtFilePath" HorizontalAlignment="Left" Margin="19,35,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="612"/>
+        <Label Content="Informe o caminho da planilha de dividendos" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="512"/>
+        <Button Name="btnCalculate" Content="Agrupar Dividendos" HorizontalAlignment="Left" Margin="636,33,0,0" VerticalAlignment="Top" Width="154" Click="btnCalculate_Click"/>
+        <DataGrid Name="dgDividends" Margin="0,68,0,0"/>
+
+    </Grid>
+</Window>

@@ -1,11 +1,11 @@
 ﻿using PriceExtractor.Entities;
 using PriceExtractor.Enums;
+using System.Globalization;
 
 namespace PriceExtractor.Tools
 {
     public class TextExtractor
     {
-        #region XP Statements Extractor
         public static List<NegotiationAsset> ExtractInXPText(string inputText, DateTime negotiationDate)
         {
             var result = GetStatementsData(inputText, negotiationDate, GetNegotiationFromXPStatement);
@@ -15,6 +15,12 @@ namespace PriceExtractor.Tools
         public static List<NegotiationAsset> ExtractInPersonalStatement(string inputText)
         {
             var result = GetStatementsData(inputText, DateTime.Now, GetNegotiationFromPersonalStatement);
+            return result;
+        }
+
+        public static List<NegotiationAsset> ExtractInUSAStatement(string inputText)
+        {
+            var result = GetStatementsData(inputText, DateTime.Now, GetNegotiationFromUSADesign);
             return result;
         }
 
@@ -59,6 +65,23 @@ namespace PriceExtractor.Tools
                 AssetType = TakeAssetType(columns[0]),
                 OperationType = (columns[1].ToUpper() == "C") ? OperationType.Buy : OperationType.Sell
             };
+
+            return negotiationAsset;
+        }
+
+        private static NegotiationAsset GetNegotiationFromUSADesign(string[] columns, DateTime? date = null)
+        {
+            var negotiationAsset = new NegotiationAsset()
+            {
+                StockCode = columns[0],
+                OperationType = columns[1].ToUpper() == "BUY" ? OperationType.Buy : OperationType.Sell,
+                NegotiationDate = DateTime.ParseExact(columns[2], "dd-MM-yyyy", CultureInfo.InvariantCulture),
+                Price = Convert.ToDouble(columns[10].Replace("R$", "").Replace(".", "").Replace(",", "."), CultureInfo.InvariantCulture),
+                Amount = Convert.ToInt32(columns[4]),
+                AssetType = AssetType.Stock
+            };
+
+            negotiationAsset.Price = negotiationAsset.Price / negotiationAsset.Amount;
 
             return negotiationAsset;
         }
@@ -118,6 +141,5 @@ namespace PriceExtractor.Tools
 
             return assetName;
         }
-        #endregion
     }
 }

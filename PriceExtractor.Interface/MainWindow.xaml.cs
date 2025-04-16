@@ -52,6 +52,20 @@ namespace PriceExtractor.Interface
             }
         }
 
+        private void btnCalculateUSA_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var negotiations = TextExtractor.ExtractInUSAStatement(txtInputText.Text);
+                dgNegotiation.ItemsSource = negotiations;
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Erro. Lembre-se, na planilha dos EUA, não copiar a primeira coluna (nome)." + Environment.NewLine + error.Message);
+                return;
+            }
+        }
+
         private void btnInsert_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -134,27 +148,10 @@ namespace PriceExtractor.Interface
             }
         }
 
-        // TODO: Remover
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnCalculateDividends_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                var negotiationAssets = NegotiationAssetService
-                    .GetAllNegotiationsAsset()
-                    .Where(x => x.AssetType == Enums.AssetType.None)
-                    .ToList();
-
-                foreach (var asset in negotiationAssets)
-                    asset.AssetType = Tools.TextExtractor.TakeAssetType(asset.StockCode);
-
-                Services.NegotiationAssetService.UpdateNegotiationsAssets(negotiationAssets);
-
-                MessageBox.Show("Sucesso.");
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show(error.Message);
-            }
+            var divScreen = new DividendScreen();
+            divScreen.ShowDialog();
         }
     }
 }
